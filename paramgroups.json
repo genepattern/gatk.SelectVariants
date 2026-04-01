@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Input",
+        "description": "Input VCF file to subset. For bgzip-compressed input (.vcf.gz), also provide the companion tabix index (.tbi).",
+        "parameters": [
+            "input.vcf",
+            "input.vcf.tbi"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Reference Genome",
+        "description": "Reference genome FASTA and required companion index files. All three files must correspond to the same reference used for alignment and variant calling.",
+        "parameters": [
+            "reference",
+            "reference.fai",
+            "reference.dict"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Output",
+        "description": "Name for the output VCF file containing the selected variants.",
+        "parameters": [
+            "output.vcf.name"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Selection Filters",
+        "description": "Criteria for selecting variants: by type, JEXL expression, filtering status, allele management, or sample identity.",
+        "parameters": [
+            "select.type.to.include",
+            "select.expressions",
+            "exclude.filtered",
+            "exclude.non.variants",
+            "remove.unused.alternates",
+            "keep.original.chr.counts",
+            "sample.name"
+        ],
+        "hidden": false
+    },
+    {
+        "name": "Advanced Options",
+        "description": "Pass additional GATK arguments or a GATK configuration file. Use the arguments file to specify options not exposed as explicit parameters (e.g., --java-options, --tmp-dir, multiple --sample-name or --select-type-to-include entries).",
+        "parameters": [
+            "arguments.file",
+            "gatk.config.file"
+        ],
+        "hidden": true
+    }
+]

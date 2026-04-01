@@ -1,0 +1,18 @@
+name: "gatk.SelectVariants - SNP selection from mitochondrial VCF"
+module: gatk.SelectVariants
+description: >
+  Tests SelectVariants on a small mitochondrial (chrM) VCF from NA12878.
+  Selects only SNP variants from the unfiltered Mutect2 VCF.
+  Uses a matching GRCh38 chrM-only reference. All test files are from the GATK
+  public test resource suite (broadinstitute/gatk GitHub repository).
+params:
+  input.vcf: data/mito_unfiltered.vcf
+  reference: data/Homo_sapiens_assembly38.mt_only.fasta
+  reference.fai: data/Homo_sapiens_assembly38.mt_only.fasta.fai
+  reference.dict: data/Homo_sapiens_assembly38.mt_only.dict
+  select.type.to.include: SNP
+  output.vcf.name: mito_snps.vcf
+
+assertions:
+  files:
+    - mito_snps.vcf
