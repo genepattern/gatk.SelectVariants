@@ -18,7 +18,7 @@ job.cpuCount=2
 job.memory=8Gb
 job.docker.image=broadinstitute/gatk\:4.1.4.1
 src.repo=https://github.com/broadinstitute/gatk
-documentationUrl=https://gatk.broadinstitute.org/hc/en-us/articles/360037055952-SelectVariants
+documentationUrl=https://github.com/genepattern/gatk.SelectVariants
 fileFormat=vcf;vcf.gz
 
 
